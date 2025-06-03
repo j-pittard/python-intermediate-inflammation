@@ -4,9 +4,17 @@ name: Inflammation CI
 on: push
 
 jobs:
-  build: 
-    runs-on: ubuntu-latest
+  build:
 
+  # Here we add the matrices definition:
+    strategy:
+      matrix:
+        os: ["ubuntu-latest", "windows-latest"]
+        python-version: ["3.11", "3.12"]
+
+    # Here we add the reference to the os matrix values
+    runs-on: ${{ matrix.os }} 
+    
     steps: 
       - name: Checkout repository
         uses: actions/checkout/@v4
