@@ -4,7 +4,7 @@ import numpy as np
 import numpy.testing as npt
 import pytest
 
-from inflammation.models import daily_mean, daily_max, daily_min, patient_normalise
+from inflammation.models import *
 
 
 @pytest.mark.parametrize(
