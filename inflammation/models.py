@@ -46,11 +46,6 @@ def load_csv(filename):
     """
     return np.loadtxt(fname=filename, delimiter=',')
 
-<<<<<<< HEAD
-def patient_normalise(data):
-    patient_max_inflammation = np.max(data, axis = 1)
-    return data/patient_max_inflammation[:,np.newaxis]
-=======
 def load_json(filename):
     """Load a numpy array from a JSON document.
     
@@ -69,7 +64,6 @@ def load_json(filename):
         data_as_json = json.load(file)
         return [np.array(entry['observations']) for entry in data_as_json]
 
->>>>>>> full-data-analysis
 
 def daily_mean(data):
     """Calculate the daily mean of a 2D inflammation data array for each day.
